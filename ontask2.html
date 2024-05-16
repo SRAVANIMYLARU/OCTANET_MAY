@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container
+    {
+        position: relative;
+        width: 100%;
+    }
+    .top-left{
+        position: absolute;
+        padding-top: 10px;
+    top:8px;
+    left:16px;
+    }
+    a{
+        text-decoration:none;
+        color:black;
+        
+    }
+    ul{
+        display: flex;
+        gap:50px;
+        list-style: none;
+    }
+    li{
+        font-size:25px;
+    }
+    .textbox{
+        position:absolute
+        top:50px;
+        left:50px;
+    }
+    .checkboxes{
+        position:absolute;
+        top:50px;
+        left:50px;
+        width:20px;
+        height: 20px;
+        
+     i
+    }
+    .centered{
+        position:absolute;
+        top:550%;
+        left:100;
+        padding-left: 1400px;
+        transform:translate(-50%,-50%);
+    }
+    .checkbox {
+        position: absolute;
+        top: 210px;
+        left: 520px;
+    }
+    .checkbox1 {
+        position: absolute;
+        top: 250px;
+        left: 520px;
+    }
+   
+    .checkbox2{
+        position: absolute;
+        top: 290px;
+        left: 520px;
+    }
+   
+    .checkbox3{
+        position: absolute;
+        top: 330px;
+        left: 520px;
+    }
+    .checkbox4{
+        position: absolute;
+        top: 370px;
+        left: 520px;
+    }
+    .checkbox5{
+        position: absolute;
+        top: 410px;
+        left: 520px;
+    }
+   
+</style>
+<body>
+    <div class="container">
+    <img src="c:\Users\DELL\Downloads\logo3.jpg" height="600" width="1350px">
+    <div class="top-left">
+        <ul>
+            <a href="do.html"><li>Home</li></a>
+           <a href="do.html"><li>Contact us</li></a>
+           <a href="do.html"><li>Sign in</li></a>
+            
+        </ul>
+        <div class="centered">
+  <input type="text" class="textbox" placeholder="(empty)"><br><br>
+  <input type="text" class="textbox" placeholder="(empty)"><br><br>
+  <input type="text" class="textbox" placeholder="(empty)"><br><br>
+  <input type="text" class="textbox" placeholder="(empty)"><br><br>
+  <input type="text" class="textbox" placeholder="(empty)"><br><br>
+  <input type="text" class="textbox" placeholder="(empty)"><br><br>
+  </div>
+  <div class="checkbox">
+    <input type="checkbox" class="checkboxes" onclick="highlightLastTextbox(0)"><br><br>
+</div>
+<div class="checkbox1">
+    <input type="checkbox" class="checkboxes" onclick="highlightLastTextbox(1)"><br><br>
+</div>
+<div class="checkbox2">
+    <input type="checkbox" class="checkboxes" onclick="highlightLastTextbox(2)"><br><br>
+</div>
+<div class="checkbox3">
+    <input type="checkbox" class="checkboxes" onclick="highlightLastTextbox(3)"><br><br>
+</div>
+<div class="checkbox4">
+    <input type="checkbox" class="checkboxes" onclick="highlightLastTextbox(4)"><br><br>
+</div>
+<div class="checkbox5">
+    <input type="checkbox" class="checkboxes" onclick="highlightLastTextbox(5)"><br><br>
+</div>
+</div>
+</div>
+<script>
+ function highlightLastTextbox(index) {
+            var textboxes = document.getElementsByClassName('textbox');
+            var lastTextbox = textboxes[textboxes.length - 1];
+            lastTextbox.focus();
+            lastTextbox.value = document.getElementsByClassName('textbox')[index].value;
+            lastTextbox.classList.add('strikethrough');
+        }
+</script>
+</body>
+</html>
